@@ -1,14 +1,33 @@
 #include <iostream>
 #include <iomanip>
+#include <time.h>
+#include <chrono>
 #include "funciones.h"
+#include "clase.h"
+
 
 
 
 int main() {
-  float vel_auto, vel_viento, altura, pendiente, energia_inicial, tiempo;
+  leer_datos();
+  double hora;
+
+  cout << "Hora: ";
+  cin >> hora;
+
+  float rad = radiacion(hora, punto[0].longitud, punto[0].latitud, punto[0].altura);// esta es una prueba con el pto 1, la idea es automatizar esta parte 
+ cout << rad << endl;
+
+  time_t seconds;
+
+  seconds = time (NULL);
+  float vel_auto, vel_viento, altura, pendiente, tiempo ;
+  
   cout << "Velocidad del auto: ";
   cin >> vel_auto;
-  
+  posiciones_carrera(73.614, 0,  11, 1);
+  cout << punto[1973].horaPnto << endl; 
+
   cout << "Velocidad del viento: ";
   cin >> vel_viento;
 
@@ -45,7 +64,7 @@ int main() {
   cout.precision(10);
   cout << "Fuerza Motor: " << fm << "\n";
 
-  float ed = energia_disponible(energia_inicial, tiempo, radiacion_captada, perdidas_parasitas, potencia_total, eficiencia_motor);
-  cout.precision(10);
-  cout << "Energia Disponible: " << ed
+  //float ed = energia_disponible(energia_inicial, tiempo, radiacion_captada, perdidas_parasitas, potencia_total, eficiencia_motor);
+  //cout.precision(10);
+  //cout << "Energia Disponible: " << ed;
 }
