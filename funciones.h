@@ -8,6 +8,7 @@
 #include <iostream>
 using namespace std;
 
+
 float g = 9.81;
 float area_frontal = 1;
 float area_trasera = 1.5;
@@ -16,7 +17,11 @@ float masa_auto = 250.00;
 float coef_rod = 0.0015; //(una rueda)
 float eficiencia_motor = 0.95;
 float energia_inicial = 5100.00;
+int ptos_totales = 13723;
 
+
+void posiciones_carrera(float velocidad, int pto_actual, float hora_actual, int dia_carrera);
+float radiacion(float Hora, float lon, float latitud, float altitud);
 float F_aerodinamica(float velocidad_auto, float velocidad_viento, float densidad_aire, float coef_arrastre_aero, float area_frontal, float area_trasera);
 float F_rodadura(float masa, float g, float pendiente, float coef_rod);
 float F_pendiente(float masa, float g, float pendiente);

@@ -1,14 +1,26 @@
 #include <iostream>
 #include <iomanip>
+#include <time.h>
+#include <chrono>
 #include "funciones.h"
+#include "clase.h"
+#include "energia.h"
+
 
 
 
 int main() {
-  float vel_auto, vel_viento, altura, pendiente, energia_inicial, tiempo;
+  leer_datos();
+
+
+
+  float vel_auto, vel_viento, altura, pendiente, tiempo ;
+  
   cout << "Velocidad del auto: ";
   cin >> vel_auto;
-  
+  posiciones_carrera(vel_auto, 0,  11, 1);
+  cout << punto[1973].horaPnto << endl; 
+/*
   cout << "Velocidad del viento: ";
   cin >> vel_viento;
 
@@ -43,9 +55,20 @@ int main() {
 
   float fm = fa+fr+fp;
   cout.precision(10);
-  cout << "Fuerza Motor: " << fm << "\n";
+  cout << "Fuerza Motor: " << fm << "\n"; */
 
-  float ed = energia_disponible(energia_inicial, tiempo, radiacion_captada, perdidas_parasitas, potencia_total, eficiencia_motor);
-  cout.precision(10);
-  cout << "Energia Disponible: " << ed
+  for(int i = 0; i <= ptos_totales; i++)
+  {
+    punto[i].radiacion_pto = radiacion(punto[i].horaPnto, punto[i].longitud, punto[i].latitud, punto[i].altura);
+    punto[i].F_pend = F_pendiente(masa_auto, g, punto[i].pend_rad);
+    punto[i].F_rod = F_rodadura(masa_auto, g, punto[i].pend_rad , coef_rod);
+    punto[i].densidadAire = densidad_aire(punto[i].altura);
+  }
+
+
+
+
+  //float ed = energia_disponible(energia_inicial, tiempo, radiacion_captada, perdidas_parasitas, potencia_total, eficiencia_motor);
+  //cout.precision(10);
+  //cout << "Energia Disponible: " << ed;
 }
