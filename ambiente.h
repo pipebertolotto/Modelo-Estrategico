@@ -16,6 +16,10 @@ int N = 285;
 double long_st = 142.5; //9,5*15
 int D = 0;
 double t_sim = 1;
+
+//E = E0 x exp[(L/Rv) x {(1/T0) - (1/Td)}]
+
+double E0 = exp(5423 * 273)
 /**************************************************/
 /*DECLARACION DE FUNCIONES****************************************/
 int coseno(int x);

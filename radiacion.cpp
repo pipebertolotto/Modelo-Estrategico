@@ -8,6 +8,7 @@
 #include <sstream>
 #include <cstdlib>
 #include "ambiente.h"
+#include "clase.h"
 using namespace std;
 
 
@@ -79,6 +80,12 @@ float radiacion(float Hora, float lon, float latitud, float altitud) {
 
 
 }
+
+
+
+
+
+
 
 
 

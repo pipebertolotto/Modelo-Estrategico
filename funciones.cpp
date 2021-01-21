@@ -5,6 +5,7 @@
 #include <cmath>
 #include <vector>
 
+
 float F_aerodinamica(float velocidad_auto, float velocidad_viento, float densidad_aire, float coef_arrastre_aero, float area_frontal, float area_trasera)//Función que calcula la fuerza aerodinamica 
 {
 
@@ -56,5 +57,7 @@ double potencia_total(float fuerza_total, float velocidad){
   float pt = fuerza_total*velocidad/3.6;
   return pt;
 }
+
+
 
 

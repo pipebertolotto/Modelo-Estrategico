@@ -17,6 +17,7 @@ float masa_auto = 250.00;
 float coef_rod = 0.0015; //(una rueda)
 float eficiencia_motor = 0.95;
 float energia_inicial = 5100.00;
+int ptos_totales = 13723;
 
 
 void posiciones_carrera(float velocidad, int pto_actual, float hora_actual, int dia_carrera);

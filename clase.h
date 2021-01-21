@@ -11,7 +11,13 @@ struct puntos
         float pend_rad;
         float pend_grad;
         float dist_km;
-        float horaPnto;       
+        float horaPnto;
+        float radiacion_pto;
+        float densidadAire;
+        float F_rod;
+        float F_pend;
+        
+               
 };
 
 extern puntos punto[13723];
